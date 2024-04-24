@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* body */
+body {
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+
+
+/* Header Section */
+/* header style */
+header {
+    color: white;
+}
+
+/* list styles */
+ul {
+    width: 60%;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+/* Removing link style */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* hover effects for list */
+.outer-circle {
+    position: relative;
+    z-index: 1;
+}
+
+.outer-circle:hover::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #444746;
+    display: block;
+    z-index: -1;
+}
+
+#menu-dots:hover::before {
+    position: absolute;
+    left: -7px;
+    top: -7px;
+}
+
+#disp:hover::before {
+    position: absolute;
+    left: -3px;
+    top: -3px;
+}
+
+.text-nav {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.text-nav:hover {
+    text-decoration: underline;
+}
+
+/* google app icon creation */
+.google-dots {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navrow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* profile icon creation */
+.profile {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #313335;
+    align-items: center;
+    padding: 3px 5px;
+}
+
+/* div info styles during hovering */
+.dots-info {
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 25px;
+    font-size: 12px;
+    background-color: #444746;
+    text-align: center;
+    line-height: 25px;
+    top: 30px;
+    left: -50px;
+}
+
+#menu-dots:hover .dots-info {
+    display: block;
+}
+
+
+.disp-info {
+    display: none;
+    position: absolute;
+    width: 180px;
+    height: 66px;
+    font-size: 11px;
+    background-color: #444746;
+    text-align: center;
+    line-height: 25px;
+    top: 30px;
+    left: -180px;
+    text-align: justify;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.disp-info span {
+    display: block;
+    margin-bottom: 2px;
+    height: 20px;
+}
+
+#disp:hover .disp-info {
+    display: block;
+}
+
+/* Section styles */
+/* style */
+section {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Google image */
+.image-div {
+    height: 70px;
+    width: 250px;
+}
+
+.image-div img {
+    width: 100%;
+    height: 100%;
+}
+
+/* search div */
+.search-div {
+    display: flex;
+    width: 90%;
+    border-radius: 20px;
+    height: 35px;
+    align-items: center;
+    border: 1px #929090 solid;
+    margin-top: -30px;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 96%;
+}
+
+.search-bar-g {
+    font-size: 12px;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    background-color: black;
+    outline: none;
+    color: white;
+    font-weight: bold;
+}
+
+.search-bar-g:active {
+    border: none;
+}
+
+.search-div-but {
+    width: 100px;
+    height: 25px;
+    font-size: 12px;
+    background-color: #444746;
+    text-align: center;
+    border: none;
+    color: white;
+}
+
+.psearch-div {
+    margin-top: -20px;
+}
+
+/* language text */
+.text-head {
+    font-size: 13px;
+}
+
+.text-head-big {
+    display: none;
+}
+
+.text-body {
+    margin-top: -50px;
+}
+
+.min-text a {
+    font-size: 12px;
+    color: aqua;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 12px;
+    width: 100%;
+    height: 120px;
+}
+
+footer .upper-footer {
+    justify-content: center;
+    height: 25px;
+    padding-top: 5px;
+    padding-left: 7px;
+    font-weight: bold;
+}
+
+footer .right {
+    padding-top: 15px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .left {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Tab responsiveness */
+@media (min-width: 450px) and (max-width: 900px) {
+
+    /* nav */
+    ul {
+        width: 35%;
+    }
+
+    /* section */
+    .text-head {
+        display: none;
+    }
+
+    .text-head-big {
+        font-size: 12px;
+        display: inline;
+    }
+
+    .text-body {
+        margin-top: -50px;
+    }
+
+    /* footer */
+    footer {
+        height: 70px;
+    }
+
+    footer .left {
+        display: none;
+    }
+}
+
+@media (min-width: 900px) {
+    ul {
+        width: 20%;
+    }
+
+    .search-div {
+        width: 720px;
+    }
+
+    /* section */
+    .text-head {
+        display: none;
+    }
+
+    .text-head-big {
+        font-size: 12px;
+        display: inline;
+    }
+
+    .text-body {
+        margin-top: -50px;
+    }
+
+    /* footer */
+    footer {
+        height: 70px;
+    }
+
+    footer .left {
+        display: none;
+    }
+}
